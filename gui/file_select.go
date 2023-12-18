@@ -26,7 +26,7 @@ func FileSelect(win fyne.Window) *widget.Button {
 
 	}, win)
 
-	fileBtn := widget.NewButton("selec file", func() {
+	fileBtn := widget.NewButton("select a file", func() {
 		fileSelect.Show()
 	})
 
