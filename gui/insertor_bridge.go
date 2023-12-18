@@ -3,7 +3,7 @@ package gui
 import (
 	"fmt"
 
-	"github.com/BeepLoop/registrar-student-insertor/insertor"
+	"github.com/BeepLoop/our-srts-student-insertor/insertor"
 )
 
 func InsertorBridge() error {

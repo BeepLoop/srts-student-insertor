@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/BeepLoop/registrar-student-insertor/gui"
+	"github.com/BeepLoop/our-srts-student-insertor/gui"
 )
 
 func main() {
