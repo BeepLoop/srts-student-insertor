@@ -1,6 +1,8 @@
 package main
 
-import "github.com/BeepLoop/registrar-student-insertor/gui"
+import (
+	"github.com/BeepLoop/registrar-student-insertor/gui"
+)
 
 func main() {
 	app := gui.GUI()

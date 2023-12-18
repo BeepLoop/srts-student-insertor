@@ -2,8 +2,6 @@ package gui
 
 import (
 	"fmt"
-	"io"
-	"os"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/dialog"
@@ -17,21 +15,15 @@ func FileSelect(win fyne.Window) *widget.Button {
 			return
 		}
 
+		if uc == nil {
+			fmt.Println("no source file selected")
+			return
+		}
+
 		file := uc.URI().Path()
 		fmt.Println("file: ", file)
-		src, err := os.Open(file)
-		if err != nil {
-			fmt.Println("error open file: ", err)
-			return
-		}
+		Options.Source = file
 
-		bytes, err := io.ReadAll(src)
-		if err != nil {
-			fmt.Println("error reading file: ", err)
-			return
-		}
-
-		fmt.Println(string(bytes))
 	}, win)
 
 	fileBtn := widget.NewButton("selec file", func() {
